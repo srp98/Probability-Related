@@ -26,7 +26,7 @@ We also have to handle missing observations in this algorithm
 
 We implement `Viterbi` algorithm aswell to know which *sequence* of states the robot was most likely to have visited using MAP estimate of the entire sequence of hidden states given a sequence of observations. This algorithm also needs to handle missing observations if encountered. We can also modify the program to out put the second-best solution to the MAP problem rather than best solution as shown in the function `second_best` in `inference.py`
 
-Note: If the MAP estimate is not unique (i.e., there are multiple sequences that all achieve the highest maximum posterior probability), then a second-best sequence should be one of the other equally good MAP estimates.
+**Note:** If the MAP estimate is not unique (i.e., there are multiple sequences that all achieve the highest maximum posterior probability), then a second-best sequence should be one of the other equally good MAP estimates.
 
-### Running Program
+## Running Program
 `graphics.py` and `robot.py` are programs for generating graphics and initial generation of probabilistic distributions for the robot's position and to the run the program just run `inference.py` to view result and output.
