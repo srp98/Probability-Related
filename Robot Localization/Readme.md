@@ -9,7 +9,7 @@ The progrom contains a simple graphical robot localization example using Hidden 
 - tkinter
 
 ## Dataset
-The folder `Data` contains the required dataset for this test
+The folder `Data` contains the required dataset for this test to play around with
 
 ## Problem Statement
 ### Model 
@@ -27,7 +27,7 @@ We have access to a noisy sensor that puts a uniform distribution on valid grid 
 
 Lastly, we shall assume that initially the robot is in any of the grid locations with equal probability and always starts with its action set to ‘stay'. 
 
-### Programs Information
+## Programs Information
 Program `robot.py` generates the initial distribution, for every timestep $i$ so we implement `forward-backword` algorithm to compute marginal distribution $p_{X_ i|Y_0,\dots ,Y_{n-1}}(\cdot |y_0,\dots ,y_{n-1})$ for each $i$ for the function in `inference.py`
 
 The forward-backward algorithm takes takes $\mathcal{O}(nk^2)$ computations, where $n$ is the total number of time steps, and $k$ is the number of possible hidden states. However, there is actually additional structure such that it's possible to compute all the node marginals in roughly $\mathcal{O}(nk)$ computations— $\mathcal{O}(nk)$ for pre-processing and $\mathcal{O}(n)$ computations for the actual message passing as shown in `inference.py`.
